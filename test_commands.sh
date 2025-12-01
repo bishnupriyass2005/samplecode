@@ -3,13 +3,13 @@
 ##################### API Observation Via CURL
 
 # A. Get All Students
-curl -X GET "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev//api/students"
+curl -X GET "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev/api/students"
 
 # B. Get One Student
 curl -X GET "http://localhost:8000/api/students/1"
 
 # C. Create Student
-curl -X POST "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev//api/students" \
+curl -X POST "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev/api/students" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Alice Johnson",
@@ -19,7 +19,7 @@ curl -X POST "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.de
   }'
 
 # D. Update Student
-curl -X PUT "http://localhost:8000/api/students/1" \
+curl -X PUT "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev/api/students/1" \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Alice Updated",
@@ -28,11 +28,11 @@ curl -X PUT "http://localhost:8000/api/students/1" \
     "year": 3
   }'
 
-# E. Delete Student
-curl -X DELETE "http://localhost:8000/api/students/1"
+E. Delete Student
+curl -X DELETE "https://vigilant-space-winner-r4q7xx6p7v5rcp94r-8000.app.github.dev/api/students/1"
 
 
 ##################### DB Observation Via SQLite Web
-- install https://github.com/coleifer/sqlite-web
-- pip install sqlite-web
-- sqlite_web students.db
+# - install https://github.com/coleifer/sqlite-web
+# - pip install sqlite-web
+# - sqlite_web students.db

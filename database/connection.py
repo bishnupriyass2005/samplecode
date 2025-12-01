@@ -2,7 +2,7 @@
 
 import sqlite3
 
-DB_FILE = 'students.db'
+DB_FILE = "students.db"
 
 def get_connection():
     conn = sqlite3.connect(DB_FILE)
@@ -12,16 +12,16 @@ def get_connection():
 def init_database():
     conn = get_connection()
     conn.execute("""
-                 CREATE TABLE IF NOT EXISTS students (
-                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                 name TEXT,
-                 email TEXT,
-                 course TEXT,
-                 year TEXT,
-                 created_at TEXT,
-                 updated_at TEXT
-                 )
-                 """)
+        CREATE TABLE IF NOT EXISTS students (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT,
+            email TEXT,
+            course TEXT,
+            year TEXT,
+            created_at TEXT,
+            updated_at TEXT
+        )
+    """)
     conn.commit()
     conn.close()
-    print("✓Database initialized")
+    print("✓ Database initialized")
