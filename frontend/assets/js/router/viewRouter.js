@@ -1,3 +1,5 @@
+import { initStudentController } from "../controllers/studentController.js";
+
 // Load a view into #app container
 async function loadView(path) {
   const html = await fetch(path).then(res => res.text());
